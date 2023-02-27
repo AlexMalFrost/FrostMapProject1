@@ -27,12 +27,6 @@ function App() {
   const [pins, setPins] = useState([]);
   const [mufts, setMufts] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
-  //const [title, setTitle] = useState(null);
-  //const [desc, setDesc] = useState(null);
-  //const [numb1, setNumb1] = useState(null);
-  //const [idi, setIdi] = useState(null);
-  //const [numb2, setNumb2] = useState(null);
-  //const [delited, setDelited] = useState(null);
   const [viewport, setViewport] = useState({
     latitude: 55.832669, 
     longitude: 48.784813,
