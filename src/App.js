@@ -77,8 +77,6 @@ function App() {
         {<ChooseButton 
               chooseButton = {chooseButton}
               setchooseButton  = {setchooseButton}
-              //handleAddClick = {handleAddClick}
-              //handleMuftClick = {handleMuftClick}
               setNewPlace = {setNewPlace}
               setNewMuft = {setNewMuft} />}
         {<PolylineLayer 
@@ -119,8 +117,6 @@ function App() {
               setCurrentUsername = {setCurrentUsername}
               setShowRegister = {setShowRegister}
               setShowLogin = {setShowLogin} />}
-        
-        //Source id="polylineLayer"
         {showRegister && <Register setShowRegister={setShowRegister} />}
         {showLogin && (
           <Login
