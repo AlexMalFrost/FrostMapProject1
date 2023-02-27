@@ -41,7 +41,6 @@ export default function Login({ setShowLogin, setCurrentUsername,myStorage }) {
         <button className="loginBtn" type="submit">
           Login
         </button>
-        
       </form>
       <div class="mysspace"></div>
       {error && <span className="failure">Something went wrong!</span>}
