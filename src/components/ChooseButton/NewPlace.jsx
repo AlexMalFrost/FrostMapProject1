@@ -37,7 +37,6 @@ export default function NewPlace({ newPlace,
     try {
       const selected = Object.values(pins).find(e => e.title === title && e.numb1 === numb1 && e.numb2 === numb2);
       if (selected) {
-        //setPins([...pins, newPin]);
         setPins(MyNewPin.concat(newEpisodes));
         setNewPlace(null);
         console.log('hi');
