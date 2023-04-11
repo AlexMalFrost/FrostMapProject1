@@ -20,12 +20,9 @@ export default function RegisterRemove({currentUsername, setCurrentUsername, myS
       setError(false);
       setSuccess(true);
       if ( currentUsername === usernameRef.current.value) {
-      	//console.log(usernameRef.current.value);
-      	//console.log(currentUsername);
       	setCurrentUsername( null );
       	myStorage.removeItem("user");
       	await axios.post("/users/remove", removeUser);
-      	//window.location.reload(true);
 				} else {
 				await axios.post("/users/remove", removeUser);
 			  };
