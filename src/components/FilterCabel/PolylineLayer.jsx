@@ -20,7 +20,6 @@ export default function PolylineLayer({ pins, fiterPins }) {
   
   console.log(filterPins);
   console.log('hahahahah');
-  //console.log(fiterPins);
 
   useEffect(() => {
     if (fiterPins === 'все кабеля') {
@@ -29,26 +28,7 @@ export default function PolylineLayer({ pins, fiterPins }) {
     return dispatch({type: "selectedcable"});
   }, [fiterPins, pins]);
 
-  /*useEffect(() => {
-    if (fiterPins === ('все кабеля')) {
-      return( setFilterPins(pins));
-      //console.log('bump bump');
-      //console.log(filterPins);
-    } else {
-      const filterPinsMain = pins.filter(items => {return items.title === fiterPins;});
-      return (setFilterPins(filterPinsMain));
-      //console.log(filterPins);
-    }
-  }, [fiterPins, pins]);
-  */
-
   function MyPipe() {
-
-    /*function selectFewerProps(show){
-      const {username, title, desc, numb1, numb2, lat, long} = show;
-      return {username, title, desc, numb1, numb2, lat, long};
-    };
-    const newEpisodes = pins.map(selectFewerProps);*/
 
     return (Object.values(groupArray(filterPins, 'title', 'numb2'))).reduce(function (r, o) {
         Object.keys(o).forEach(function (k) {
@@ -57,11 +37,6 @@ export default function PolylineLayer({ pins, fiterPins }) {
         return r;
     }, []);
   };
-
-
-  /*const resultt = MyPipe().map(function(array, index) { 
-    return array.map(t=>([t.long, t.lat]));
-  });*/
 
   const dataOneTwo = () => {
     const dataOne = {
