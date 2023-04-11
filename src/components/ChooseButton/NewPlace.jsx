@@ -43,7 +43,6 @@ export default function NewPlace({ newPlace,
         await axios.post("/pins/update", newPin);
       } else {
         setPins(MyNewPin.concat(newEpisodes));
-        //setPins([...pins, newPin]);
         setNewPlace(null);
         console.log('bye-bye');
         await axios.post("/pins", newPin);
