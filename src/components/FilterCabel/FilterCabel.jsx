@@ -11,14 +11,6 @@ export default React.memo(function FilterCabel({ pins, dispatch}) {
 	useEffect(() => {
 		return dispatch({type: "filteredCables", showFilterCabel});
 	}, [showFilterCabel, dispatch]);
-	
-	/*useEffect(() => {
-    setFiterPins(showFilterCabel);
-  }, [showFilterCabel, setFiterPins]);*/
-  //console.log(showFilterCabel);
-	
-	//setFiterPins(showFilterCabel);
-
 	let arr1 = pins.map(item => item.title).filter((element, index, array) => array.indexOf(element) === index);
 	let arr2 = ['все кабеля'];
 	const options = [...arr1, ...arr2];
@@ -37,18 +29,6 @@ export default React.memo(function FilterCabel({ pins, dispatch}) {
 	  };
 	});
 	
-	/*if (showFilterCabel == arr2) {
-    	console.log(fiterPins);
-    	setFiterPins(pins);
-    	console.log('bump bump');
-    } else {
-      const filterPinsMain = pins.filter(employee => {return employee.title === showFilterCabel;});
-      //setFiterPins();
-      console.log(filterPinsMain);
-    }
-
-	function pinFilter() { };*/
-
 	return (
 		<div className="dropdownCabel" >
 			<div className="dropdown" >
